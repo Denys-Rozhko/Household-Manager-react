@@ -1,7 +1,6 @@
 import { configureStore, combineReducers, createSlice } from "@reduxjs/toolkit";
 
 import infoReducer from "./info";
-import recordReducer from "./record";
 
 const mainSlice = createSlice({
   name: "main",
@@ -24,7 +23,6 @@ const store = configureStore({
   reducer: combineReducers({
     main: mainSlice.reducer,
     info: infoReducer,
-    record: recordReducer
   })
 });
 

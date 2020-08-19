@@ -38,7 +38,7 @@ export async function fetchInfo() {
 }
 
 export async function updateInfo(toUpdate) {
-  async (dispatch, getState) => {
+  return async (dispatch, getState) => {
     try {
       const uid = await getUid();
       const updatedData = {
