@@ -1,8 +1,20 @@
 import React from "react";
+import {
+  Switch,
+  Route
+} from "react-router-dom";
+import EmptyLayout from "./layouts/EmptyLayout";
 
 function App() {
   return (
-    <h1>Hello world from react</h1>
+    <Switch>
+      <Route path="/login">
+        <EmptyLayout/>
+      </Route>
+      <Route path="/">
+        <EmptyLayout/>
+      </Route>
+    </Switch>
   );
 }
 
