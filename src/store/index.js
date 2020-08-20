@@ -1,6 +1,6 @@
 import { configureStore, combineReducers, createSlice } from "@reduxjs/toolkit";
 
-import infoReducer from "./info";
+import infoSlice from "./info";
 
 const mainSlice = createSlice({
   name: "main",
@@ -22,7 +22,7 @@ export const { setError, clearError } = mainSlice.actions;
 const store = configureStore({
   reducer: combineReducers({
     main: mainSlice.reducer,
-    info: infoReducer,
+    info: infoSlice.reducer,
   })
 });
 
